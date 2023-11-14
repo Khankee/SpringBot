@@ -1,6 +1,6 @@
-package lk.poools.top.springbot.repository;
+package lk.poools.top.springbot.database.repository;
 
-import lk.poools.top.springbot.model.Pool;
+import lk.poools.top.springbot.database.entity.Pool;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

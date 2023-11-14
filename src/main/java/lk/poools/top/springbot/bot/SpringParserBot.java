@@ -1,4 +1,4 @@
-package lk.poools.top.springbot.test;
+package lk.poools.top.springbot.bot;
 
 import lk.poools.top.springbot.config.BotConfig;
 import lk.poools.top.springbot.services.PoolService;
@@ -14,14 +14,15 @@ import java.util.Calendar;
 @Slf4j
 @Component
 @AllArgsConstructor
-public class Spring_parser_bot extends TelegramLongPollingBot {
+public class SpringParserBot extends TelegramLongPollingBot {
 
 
-    final BotConfig botConfig;
-    PoolService service;
+    private final BotConfig botConfig;
+    private PoolService service;
 
     @Override
     public void onUpdateReceived(Update update) {
+
         //Чтобы боту лично не писали и не выдавал ошибку
         if (update.getChannelPost() == null) return;
         if (update.getChannelPost().getText() == null) return;

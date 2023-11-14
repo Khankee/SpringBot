@@ -1,4 +1,4 @@
-package lk.poools.top.springbot.model;
+package lk.poools.top.springbot.database.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

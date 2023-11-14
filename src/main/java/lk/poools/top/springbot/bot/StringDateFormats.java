@@ -1,4 +1,4 @@
-package lk.poools.top.springbot.test;
+package lk.poools.top.springbot.bot;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +32,7 @@ public class StringDateFormats {
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yy");
             this.calendar.setTime(dateFormat.parse(dateMatcher.group()));
         }
-        log.info("extractDate - Done, Date is " + calendar);
+        log.info("extractDate - Done, Date is {} ", calendar);
     }
 
     //Проверяет наличие ключевых слов
@@ -66,8 +66,8 @@ public class StringDateFormats {
                 }
             }
         }
-        log.info("New data: " + stringBuilder);
-        log.info("Date is: " + calendar);
+        log.info("New data: {} ",  stringBuilder);
+        log.info("Date is: {} ",  calendar);
         return stringBuilder.toString();
     }
 }

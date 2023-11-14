@@ -1,6 +1,6 @@
 package lk.poools.top.springbot.config;
 
-import lk.poools.top.springbot.test.Spring_parser_bot;
+import lk.poools.top.springbot.bot.SpringParserBot;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -15,7 +15,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 public class Initializer {
 
     @Autowired
-    Spring_parser_bot bot;
+    SpringParserBot bot;
 
     @EventListener({ContextRefreshedEvent.class})
     public void init() {
